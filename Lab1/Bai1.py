@@ -66,14 +66,75 @@ l_date = date(int(chuoisau[0]),int( chuoisau[1]), int(chuoisau[2]))
 delta = l_date - f_date
 print("Số ngày cách nhau là : ",delta.days)
 # câu 15
-
+pi = 3.14
+r = float(input("Nhập bán kính : "))
+V= 4.0/3.0* pi * r**3
+print('Thể tích của hình cầu là  ',V)
 # câu 16
+def sosanh(n):
+    if n <= 17:
+        return 17 - n
+    else:
+        return (n - 17) * 2 
+    
+nhap = int(input("Nhập số cần so sánh với 17 : "))
+print(sosanh(nhap))
 # câu 17
+def phamvi(n):
+      return ((abs(1000 - n) <= 100) or (abs(2000 - n) <= 100))
+So = int( input("Nhập số cần kiểm tra : "))
+if (phamvi(So) == True):
+      print("Số bạn nhập có nằm trong khoảng 100 của phạm vi 1000 hoặc 2000")
+else:
+      print("Số bạn nhập không nằm trong khoảng 100 của phạm vi 1000 hoặc 2000")
 # câu 18
+def Tong(x, y, z):
+     sum = x + y + z 
+     if x == y == z:
+      sum = sum * 3
+     return sum
+a = input("Nhập 3 số cần tính , cách nhau bằng dấu phấy : ")
+lista = a.split(",")
+print("Kết quả là : ",Tong(int(lista[0]),int(lista[1]),int(lista[2])))
 # câu 19
+def ChuoiMoi(text):
+  if len(text) >= 2 and text [:2] == "Is":
+    return text
+  return "Is" + text
+chuoi = input("Nhập tên : ")
+print(ChuoiMoi(chuoi))
 # câu 20
+def lap(text, n):
+   result = ""
+   for i in range(n):
+      result = result + text
+   return result
+chuoi = input("Nhập chuỗi cần lặp : ")
+so  = int(input("Nhập số lần cần lặp: "))
+print("Chuỗi mới : ",lap(chuoi, so))
 # câu 21 
+so = int(input("Nhập số : "))
+kiemtra = so % 2
+if kiemtra > 0:
+    print("Số {0} là số lẻ ".format(so))
+else:
+    print("Số {0} là số chẵn ".format(so))
 # câu 22
+def List_check(nums,numcheck):
+  count = 0  
+  for num in nums:
+    if num == numcheck:
+      count = count + 1
+
+  return count
+sophantu = int(input("Nhập số phần tử của list : "))
+chuoiso = []
+for i in range(sophantu):
+   val = int(input('Nhập giá trị: '))
+   chuoiso.append(val)
+socancheck = int(input("Nhập số cần kiểm tra : "))
+print("Số lần sô cần kiểm tra xuất hiện trong chuỗi là : ",List_check(chuoiso,socancheck))
+
 # câu 23
 # câu 24
 # câu 25
