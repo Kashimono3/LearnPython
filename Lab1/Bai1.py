@@ -55,7 +55,18 @@ is a  ....... multi-line
 heredoc string --------> example
 """)
 # câu 14
+from datetime import date
+print("Nhập theo Năm Tháng Ngày")
+ngaydau =input("Nhập chuỗi ngày đầu : (cách nhau bằng dấu phẩy)")
+chuoi = ngaydau.split(",")
+ngaysau = input("Nhập chuỗi ngày sau : (cách nhau bằng dấu phẩy)")
+chuoisau = ngaysau.split(",")
+f_date = date(int(chuoi[0]),int( chuoi[1]), int(chuoi[2]))
+l_date = date(int(chuoisau[0]),int( chuoisau[1]), int(chuoisau[2]))
+delta = l_date - f_date
+print("Số ngày cách nhau là : ",delta.days)
 # câu 15
+
 # câu 16
 # câu 17
 # câu 18
