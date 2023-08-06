@@ -134,7 +134,48 @@ for i in range(sophantu):
    chuoiso.append(val)
 socancheck = int(input("Nhập số cần kiểm tra : "))
 print("Số lần sô cần kiểm tra xuất hiện trong chuỗi là : ",List_check(chuoiso,socancheck))
-
 # câu 23
+def copy(text, n):
+  flen = 2
+  if flen > len(text):
+    flen = len(text)
+  substr = text[:flen]
+  result = ""
+  for i in range(n):
+    result = result + substr
+  return result
+text = input("Nhập chuỗi : ")
+num = int(input("Nhập số : "))
+print(copy(text, num))
 # câu 24
+def is_vowel(str,char):
+    all_vowels = str
+    return char in all_vowels
+
+text = input("Nhập chuỗi : ")
+kytu = input("Nhập từ : ")
+is_vowel(text,kytu)
+if (is_vowel(text, kytu) == True):
+      print("Từ {0} có nằm trong chuỗi  {1}".format(kytu,text))
+else:
+       print("Từ {0} không nằm trong chuỗi  {1}".format(kytu,text))
+
 # câu 25
+def check(group_data, n):
+   for value in group_data:
+       if n == value:
+           return True
+   return False
+
+sophantu = int(input("Nhập số phần tử của list : "))
+chuoiso = []
+for i in range(sophantu):
+   val = int(input('Nhập giá trị: '))
+   chuoiso.append(val)
+socancheck = int(input("Nhập số cần kiểm tra : "))
+
+check(chuoiso, socancheck)
+if (check(chuoiso, socancheck) == True):
+      print("Số {0} có nằm trong chuỗi số {1}".format(socancheck,chuoiso))
+else:
+       print("Số {0} không nằm trong chuỗi số {1}".format(socancheck,chuoiso))
