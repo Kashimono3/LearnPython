@@ -125,7 +125,6 @@ def List_check(nums,numcheck):
   for num in nums:
     if num == numcheck:
       count = count + 1
-
   return count
 sophantu = int(input("Nhập số phần tử của list : "))
 chuoiso = []
@@ -151,7 +150,6 @@ print(copy(text, num))
 def is_vowel(str,char):
     all_vowels = str
     return char in all_vowels
-
 text = input("Nhập chuỗi : ")
 kytu = input("Nhập từ : ")
 is_vowel(text,kytu)
@@ -159,21 +157,18 @@ if (is_vowel(text, kytu) == True):
       print("Từ {0} có nằm trong chuỗi  {1}".format(kytu,text))
 else:
        print("Từ {0} không nằm trong chuỗi  {1}".format(kytu,text))
-
 # câu 25
 def check(group_data, n):
    for value in group_data:
        if n == value:
            return True
    return False
-
 sophantu = int(input("Nhập số phần tử của list : "))
 chuoiso = []
 for i in range(sophantu):
    val = int(input('Nhập giá trị: '))
    chuoiso.append(val)
 socancheck = int(input("Nhập số cần kiểm tra : "))
-
 check(chuoiso, socancheck)
 if (check(chuoiso, socancheck) == True):
       print("Số {0} có nằm trong chuỗi số {1}".format(socancheck,chuoiso))
