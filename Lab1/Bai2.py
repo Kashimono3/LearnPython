@@ -152,6 +152,14 @@ try:
 except :
   print("vui lòng nhập số!")
 # Câu 10
+def inHinh(n):
+ for i in range(n):
+    for j in range(i+1):
+        if j == 0 or j == i or i == n - 1:
+            print("*",end="")
+        else:
+            print(" ",end="")
+    print()
 # Câu 11
 def DoiGioPhutGiay(seconds):
   hours = seconds // 3600
