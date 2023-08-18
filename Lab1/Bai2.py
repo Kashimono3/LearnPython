@@ -99,7 +99,9 @@ try:
 except: 
   print("Vui lòng nhập số")
 # câu 6 
-
+def TimSoLonhi(n):
+    n.sort()
+    return n[len(n)-2]
 # câu 7 
 import math
 def TongCanBac2(n):
