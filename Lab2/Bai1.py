@@ -46,7 +46,7 @@ class DanhSachSv:
         else:
             return False
     def timSvTheoTen(self,ten:str):
-        return [sv for sv in self.Ten if sv.Ten == ten]
+       pass
        
     def timSvSinhTruocNgay(self,ngay:datetime)
         pass
