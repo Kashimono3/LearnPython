@@ -45,10 +45,15 @@ class DanhSachSv:
             return True
         else:
             return False
-    def timSvTheoTen(self,ten:str):
+    
        pass
        
     def timSvSinhTruocNgay(self,ngay:datetime)
         pass
-    def docDanhSach(text)
-        f = open(text,"r")
+    def timSvTheoTen(self,ten:str):
+        listSV = []
+        if (self.soLuongSinhVien() > 0):
+         for sv in self.listSinhVien:
+            if (nam.upper() in sv.hoTen.upper()):
+                listSV.append(sv)
+        return listSV
