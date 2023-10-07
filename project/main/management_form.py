@@ -81,7 +81,7 @@ class Plant():
 
    #=========Button Frame==================
         btn_Frame = Frame(Manage_Frame, bd=3, relief=RIDGE, bg="snow")
-        btn_Frame.place(x=10, y=530, width=370)
+        btn_Frame.place(x=10, y=570, width=370)
 
         Addbtn = Button(btn_Frame,text="Add",width=10,command=self.add_SP).grid(row=0,column=0,padx=5,pady=5)
         updatebtn = Button(btn_Frame, text="Update", width=10,command=self.update_data).grid(row=0, column=1, padx=5, pady=5)
