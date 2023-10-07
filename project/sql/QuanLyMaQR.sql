@@ -25,7 +25,8 @@ CREATE TABLE Plants_and_Livestock (
     planting_date DATE,
     location NVARCHAR(255),
 	name_image NVARCHAR(255),
-    image VARBINARY(MAX)
+    image VARBINARY(MAX),
+    qr_image VARBINARY(MAX)
 );
 GO
 select *from Plants_and_Livestock

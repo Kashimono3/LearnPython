@@ -19,7 +19,7 @@ class Plant():
         self.root = root
         self.root.title("Quản Lý Truy Xuất Nguồn Gốc")
           # Giảm 30 pixels để tránh che phủ taskbar
-        root.geometry("1500x800+300+200")
+        root.geometry("1200x800+0+0")
         root.resizable(False, False)
         title = Label(self.root,text="Quản Lý Truy Xuất Nguồn Gốc" ,bd=9,relief=GROOVE, font=("Roboto",30,"bold"),bg="#57a1f8",fg="black")
         title.pack(side=TOP,fill=X)
@@ -36,39 +36,39 @@ class Plant():
 
         #==============Manageframe============================================
         Manage_Frame = Frame(self.root,bd=4,relief=RIDGE,bg="snow")
-        Manage_Frame.place(x=20,y=100,width=500,height=650)
+        Manage_Frame.place(x=20,y=100,width=400,height=650)
 
-        m_title = Label(Manage_Frame,text="Thông tin", bg="snow",fg="black",font=("Roboto",30,"bold"))
+        m_title = Label(Manage_Frame,text="Thông tin", bg="snow",fg="black",font=("Roboto",20,"bold"))
         m_title.grid(row=0 ,columnspan=2,pady=20)
 
-        lbl_roll = Label(Manage_Frame,text="ID", bg="snow",fg="black",font=("Roboto",15,"bold"))
+        lbl_roll = Label(Manage_Frame,text="ID", bg="snow",fg="black",font=("Roboto",10,"bold"))
         lbl_roll.grid(row=1 ,column=0,pady=10,padx=20,sticky="w")
-        txt_Roll=Entry(Manage_Frame,textvariable=self.Roll_No_var,font=("Roboto",15,"bold"),bd=5,relief=GROOVE)
+        txt_Roll=Entry(Manage_Frame,textvariable=self.Roll_No_var,font=("Roboto",10,"bold"),bd=5,relief=GROOVE)
         txt_Roll.grid(row=1 ,column=1,pady=10,padx=20,sticky="w")
 
-        lbl_name = Label(Manage_Frame, text="Name", bg="snow", fg="black", font=("Roboto", 15, "bold"))
+        lbl_name = Label(Manage_Frame, text="Name", bg="snow", fg="black", font=("Roboto", 10, "bold"))
         lbl_name.grid(row=2, column=0, pady=10, padx=20, sticky="w")
-        txt_name = Entry(Manage_Frame,textvariable=self.name_var, font=("Roboto", 15, "bold"), bd=5, relief=GROOVE)
+        txt_name = Entry(Manage_Frame,textvariable=self.name_var, font=("Roboto", 10, "bold"), bd=5, relief=GROOVE)
         txt_name.grid(row=2, column=1, pady=10, padx=20, sticky="w")
 
-        lbl_category = Label(Manage_Frame, text="Category",bg="snow", fg="black", font=("Roboto", 15, "bold"))
+        lbl_category = Label(Manage_Frame, text="Category",bg="snow", fg="black", font=("Roboto", 10, "bold"))
         lbl_category.grid(row=3, column=0, pady=10, padx=20, sticky="w")
-        txt_category = Entry(Manage_Frame, textvariable=self.category_var,font=("Roboto", 15, "bold"), bd=5, relief=GROOVE)
+        txt_category = Entry(Manage_Frame, textvariable=self.category_var,font=("Roboto", 10, "bold"), bd=5, relief=GROOVE)
         txt_category.grid(row=3, column=1, pady=10, padx=20, sticky="w")
 
-        lbl_plantingDate = Label(Manage_Frame, text="PlantingDate", bg="snow", fg="black", font=("Roboto", 15, "bold"))
+        lbl_plantingDate = Label(Manage_Frame, text="PlantingDate", bg="snow", fg="black", font=("Roboto", 10, "bold"))
         lbl_plantingDate.grid(row=4, column=0, pady=10, padx=20, sticky="w")
-        txt_plantingDate = Entry(Manage_Frame, textvariable=self.plantingDate_var,font=("Roboto", 15, "bold"), bd=5, relief=GROOVE)
+        txt_plantingDate = Entry(Manage_Frame, textvariable=self.plantingDate_var,font=("Roboto", 10, "bold"), bd=5, relief=GROOVE)
         txt_plantingDate.grid(row=4, column=1, pady=10, padx=20, sticky="w")
         
 
-        lbl_location = Label(Manage_Frame, text="Location",bg="snow", fg="black", font=("Roboto", 15, "bold"))
+        lbl_location = Label(Manage_Frame, text="Location",bg="snow", fg="black", font=("Roboto", 10, "bold"))
         lbl_location.grid(row=5, column=0, pady=10, padx=20, sticky="w")
-        txt_location = Entry(Manage_Frame,textvariable=self.location_var, font=("Roboto", 15, "bold"), bd=5, relief=GROOVE)
+        txt_location = Entry(Manage_Frame,textvariable=self.location_var, font=("Roboto", 10, "bold"), bd=5, relief=GROOVE)
         txt_location.grid(row=5, column=1, pady=10, padx=20, sticky="w")
 
         
-        btn_img = Button(Manage_Frame, text="Chọn ảnh", width=15, command=self.select_image)
+        btn_img = Button(Manage_Frame, text="Chọn ảnh", width=10, command=self.select_image)
         btn_img.grid(row=7, column=0, pady=10, padx=20, sticky="w")
         self.img_label = Label(Manage_Frame)
         self.img_label.grid(row=6,column=0,pady= 10, padx=2,sticky="w")
@@ -81,16 +81,16 @@ class Plant():
 
    #=========Button Frame==================
         btn_Frame = Frame(Manage_Frame, bd=3, relief=RIDGE, bg="snow")
-        btn_Frame.place(x=20, y=580, width=420)
+        btn_Frame.place(x=10, y=530, width=370)
 
-        Addbtn = Button(btn_Frame,text="Add",width=10,command=self.add_SP).grid(row=0,column=0,padx=10,pady=10)
-        updatebtn = Button(btn_Frame, text="Update", width=10,command=self.update_data).grid(row=0, column=1, padx=10, pady=10)
-        deletebtn = Button(btn_Frame, text="Delete", width=10,command=self.delete_data).grid(row=0, column=2, padx=10, pady=10)
-        Clearbtn = Button(btn_Frame, text="Clear", width=10,command=self.clear).grid(row=0, column=3, padx=10, pady=10)
+        Addbtn = Button(btn_Frame,text="Add",width=10,command=self.add_SP).grid(row=0,column=0,padx=5,pady=5)
+        updatebtn = Button(btn_Frame, text="Update", width=10,command=self.update_data).grid(row=0, column=1, padx=5, pady=5)
+        deletebtn = Button(btn_Frame, text="Delete", width=10,command=self.delete_data).grid(row=0, column=2, padx=5, pady=5)
+        Clearbtn = Button(btn_Frame, text="Clear", width=10,command=self.clear).grid(row=0, column=3, padx=5, pady=5)
        
    # =========2nd Detials  Frame==================
         Detials_Frame = Frame(self.root, bd=4, relief=RIDGE, bg="snow")
-        Detials_Frame.place(x=550, y=100, width=930, height=650)
+        Detials_Frame.place(x=430, y=100, width=750, height=650)
 
         lbl_search = Label(Detials_Frame, text="Search By", bg="snow", fg="Black",font=("Roboto", 20, "bold"))
         lbl_search.grid(row=0, column=0, pady=10, padx=20, sticky="w")
@@ -107,7 +107,7 @@ class Plant():
 
 #========== table frame ===========
         Table_Frame = Frame(Detials_Frame, bd=4, relief=RIDGE, bg="snow")
-        Table_Frame.place(x=10, y=70, width=900, height=620)
+        Table_Frame.place(x=10, y=70, width=700, height=620)
 
         scroll_x = Scrollbar(Table_Frame,orient=HORIZONTAL)
         scroll_y = Scrollbar(Table_Frame,orient=VERTICAL)
@@ -126,7 +126,7 @@ class Plant():
 
         
         self.plant_table['show'] = 'headings'
-        self.plant_table.column("ID",width=100)
+        self.plant_table.column("ID",width=50)
         self.plant_table.column("name", width=100)
         self.plant_table.column("category", width=100)
         self.plant_table.column("plantingDate", width=100)
