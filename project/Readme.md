@@ -1,6 +1,8 @@
 py -m pip install pyodbc
 py -m pip install pillow
 py -m pip install qrcode
+py -m pip install Pandas
+py -m pip install Matplotlib
 
 
 
